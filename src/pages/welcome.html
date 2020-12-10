@@ -1,0 +1,38 @@
+---
+subject: Welcome to One, Bemvindu mai One.
+welcome: Wecome to One!
+first-name: James
+message: Welcome to One
+---
+
+<container>
+  {{> header}}
+  <callout>
+      <h4 class="text-center">{{message}}</h4>
+  </callout>
+  <row>
+    <columns>
+      <spacer size="32"></spacer>
+      <h1>
+        <strong>Hello {{first-name}},</strong>
+
+        <br />{{welcome}}
+      </h1>
+      <spacer size="16"></spacer>
+
+      <h4>
+        <strong>Your invitation token will expire in 7 days!</strong>
+        <br />
+        Please activate your account before it expires.
+      </h4>
+      <button class="large radius primary" href="#">
+        Activate Your Account
+      </button>
+      <p>
+        Thanks for choosing One, we’re glad to have you with us! <br />
+        - The Similie Team
+      </p>
+    </columns>
+  </row>
+  {{> footer}}
+</container>

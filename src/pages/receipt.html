@@ -1,0 +1,111 @@
+---
+subject: Receipt
+welcome: Wecome to One!
+first-name: James
+transaction: 5c_AyALeT
+
+th1: Quantity
+th2: SKU
+th3: Description
+th4: Unit Price
+th5: Subtotal
+
+quantity: 1
+sku: FRS8BIKIS4NX
+description: Proin ac quam et lectus vestibulum blandit. 
+unitprice: $0
+subtotal: $0
+---
+
+<container>
+  {{> header}}
+
+  <callout class="subheading success">
+      <h4 class="text-center">Receipt for {{message}} transaction: {{transaction}}</h4>
+  </callout>
+
+  <row>
+    <columns>
+      <h3>Order Details</h3>
+      <hr/>
+
+
+      <table>
+        <tr>
+          <th >{{th1}}</th>
+          <th>{{th2}}</th>
+          <th>{{th3}}</th>
+          <th class="text-right">{{th4}}</th>
+        </tr>
+
+        <tr>
+          <td>{{quantity}}</td>
+          <td>{{sku}}</td>
+          <td>{{description}}</td>
+          <td class="text-right">{{unitprice}}</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>{{quantity}}</td>
+          <td>{{sku}}</td>
+          <td>{{description}}</td>
+          <td class="text-right">{{unitprice}}</td>
+          <td></td>
+        </tr>
+      </table>
+      <spacer size="24"></spacer>
+
+      <table>
+        <tr>
+          <td class="text-right">Tax</td>
+          <th class="text-right">$0</th>
+        </tr>
+        <tr>
+          <td class="text-right">{{th5}}</td>
+          <th class="text-right">{{subtotal}}</th>
+        </tr>
+      </table>
+
+      
+      <h3>Payment Methods</h3>
+      <hr/>
+      
+      <table>
+        <tr>
+          <td>Cash</td>
+          <th>$1234</th>
+        </tr>
+      </table>
+        
+      <spacer size="16"></spacer>
+     
+
+      <h3>Payment Details </h3>
+      <hr/>
+
+      <table>
+        <tr>
+          <td>Date</td>
+          <th>Monday, August 10, 2020 4:07 PM</th>
+        </tr>
+        <tr>
+          <td>Total Retail:</td>
+          <th>{{subtotal}}</th>
+        </tr>
+        <tr>
+          <td>Sales Tax</td>
+          <th>{{subtotal}}</th>
+        </tr>
+        <tr>
+          <td>Total Cost</td>
+          <th>{{subtotal}}</th>
+        </tr>
+      </table>
+
+      </columns>
+    </row>
+
+
+
+  {{> footer}}
+</container>
